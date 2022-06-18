@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Almarai', sans-serif;
+    font-family: 'Amiri', serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+}
+body{
+    text-align: center;
+}
+#check,#lb,.navphone{
+    display: none;
+}
+nav{
+    direction: rtl;
+    text-align: right;
+    width: 100%;
+    padding: 0 1%;
+    position: fixed;
+    top: 0;
+    background-color: beige;
+    z-index: 999;
+}
+nav ul{
+    width: 100%;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 1%;
+    padding: 1%;
+    transition:all .4s;
+}
+nav ul li:hover{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+#logo{
+    float: left;
+    font-style: italic;
+}
+/*style main*/
+main{
+    margin: 5% auto;
+    width: 90%;
+    background-color: beige;
+    padding: 1%;
+    border-radius: 20px;
+    font-size: 1.2em;
+}
+.divad{
+    width: 45%;
+    background-color: white;
+    display: inline-block;
+    margin: 2%;
+    transition: all .5s ease-in-out;
+    position: relative;
+    border-color: transparent;
+    padding: 0 1%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.divad::before{
+    border-radius: 20px;
+    height: 0px;
+    width: 0px ;
+    background-color: black;
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    content: '';
+    transition: all 1s ease-in-out;
+}
+.divad:hover{
+    color: blue;
+}
+.divad:hover::before{
+    width: 100%;
+    height: 100%;
+}
+hr{
+    margin: 1%;
+}
+.descreptionad,.imgad{
+    width: 49%;
+    display: inline-block;
+}
+.imgad{
+    vertical-align: top;
+}
+.imgad img{
+    width: 200px;
+    height: 200px;
+}
+.titlead{
+    width: 100%;
+}
+.infoper{
+    width: 100%;
+}
+.desproduc{
+    text-align: left;
+}
+.btn{
+    width: 50%;
+    margin: 2%;
+    padding: 1%;
+    background-color: darkblue;
+    color: white;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    z-index: 8;
+}
+.btn:hover{
+    background-color: black;
+}
+footer{
+    background-color: beige;
+    padding: 1%;
+    width: 100%;
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+.links{
+    padding:2%;
+    background:linear-gradient(to bottom,beige,white,beige)
+}
+.links li{
+    display: inline-block;
+    margin: 1% 5%;
+}
+.namedesign{
+    color: blue;
+    font-size: 1.2em;
+    font-style: italic;
+}
+/*Media query*/
+@media (max-width:1200px){
+    .navphone{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        background-color: beige;
+        padding: 2%;
+        box-shadow: 1px 1px 4px black;
+    }
+    #lb{
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 20px;
+        float: left;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    .sp{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: black;
+    }
+    #sp1{
+        top: 1px;
+    }
+    #sp2{
+        top: 7px;
+    }#sp3{
+        top: 13px;
+    }
+    #check:checked ~ nav{
+        transform: translateY(40px);
+    }
+    #check:checked ~ .navphone{
+        box-shadow: none;
+    }
+    nav{
+        text-align: center;
+        transition: all .5s ease-in-out;
+        z-index: 10;
+        transform: translateY(-300px);
+    }
+    nav ul li{
+        display: block;
+    }
+    .logo{
+        float: right;
+    }
+    #logo{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    main{
+        width: 98%;
+        margin-top: 12%;
+    }
+    .divad{
+        width: 90%;
+        display: block;
+        margin: 2% auto;
+        padding: 0 1%;
+    }
+    .imgad img{
+        width: 150px;
+        height: 150px;
+    }
+    .links li{
+        display: block;
+    }
+}
+@media (max-width:1400px) and (min-width:769px){
+    .imgad img{
+        width: 100%;
+        height: 120px;
+    }
+}
